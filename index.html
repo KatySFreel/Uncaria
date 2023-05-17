@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<?php 
+	require_once("../../sources/landings/api.php");
+	$api = new Api();
+?>
+<html lang="IT">
+
+<head>
+	<base href="<?=$api->baseURL()?>">
+	<meta name="robots" content="noindex">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>UNCARIA</title>
+	<!-- Styling -->
+	<meta name="theme-color" content="#A1BB5E">
+	<link rel="icon" type="image/png" href="img/favicon.png">
+	<link href="https://fonts.googleapis.com/css?family=Oswald:300,regular,500,600,700" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700,900" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet" />
+	<!-- style CSS -->
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<script defer="defer" src="https://cdn.leadreaktor.com/stats.js"></script>
+	<style>
+		.hide,
+		.flag-dropdown {
+			display: none;
+		}
+
+		.error-box {
+			color: #fff;
+			background-color: #DE5042 !important;
+			border-radius: 5px;
+			text-align: center;
+			width: 240px;
+			font-size: 13px;
+			line-height: 20px;
+			margin: 5px auto !important;
+			z-index: 100;
+		}
+
+		input:invalid {
+			box-shadow: none;
+		}
+
+		.intl-tel-input {
+			width: 100% !important;
+		}
+
+		@media (max-width: 350px) {
+			.error-box {
+				width: 100% !important;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__top">
+			<div class="container">
+				<div class="header__top-wrapper">
+					<a href="#to_form" class="btn btn-header red-block">
+						Affrettarsi!
+					</a>
+					<p class="header__text">
+						Le confezioni in offerta finiranno presto. Rimasti solo <b><span class="packs-instock">25</span>
+							pezzi. il <span class="js-current-date"></span></b>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="header__center">
+			<div class="container">
+				<div class="header__wrapper">
+					<div class="header__offer offer header-offer">
+						<div class="header-offer__item offer__text-content wow fadeInLeft">
+							<h1 class="offer__title">
+								Ottimo benessere e buona salute
+							</h1>
+							<ul class="offer__menu offer-menu">
+								<li class="offer__item">
+									<div class="offer__item-bg"></div>
+									<p class="offer__item-text">
+										Corretto funzionamento del corpo
+									</p>
+								</li>
+								<li class="offer__item">
+									<div class="offer__item-bg"></div>
+									<p class="offer__item-text">
+										Ottimo benessere
+									</p>
+								</li>
+								<li class="offer__item">
+									<div class="offer__item-bg"></div>
+									<p class="offer__item-text">
+										Forte immunità
+									</p>
+								</li>
+							</ul>
+						</div>
+						<div class="offer-wrapper-img">
+							<div class="header-offer__item header-offer__item-img">
+								<img class="offer-product product" src="img/product.png" alt="">
+							</div>
+						</div>
+						<div class="header-offer__item header-form  wow fadeInRight">
+							<div class="header-form__wrapper">
+								<form id="form" class="form form-header" method="post" action="">
+									<input name="country" type="hidden" value="IT">
+									<div class="form-header__wrapper form__wrapper">
+										<div class=" form-header__top form__top">
+											<p class="form-header__text form__text">
+												Ordina uncaria con uno
+											</p>
+											<h2 class="form__title">
+												sconto del 50%
+											</h2>
+										</div>
+										<div class="form-header__price form__price">
+											<span class="oldPriceAndLabelForLandingInfoApi price-old">89.8 EUR</span>
+											<span class="priceAndLabelForLandingInfoApi price-new">44.9 EUR</span>
+										</div>
+										<div class="form-header__content form__content">
+											<label for="">
+												Il tuo nome:
+											</label>
+											<input class="input" name="name" required placeholder="Elena Bianchi" type="text">
+											<label for="">
+												Telefono:
+											</label>
+											<input class="input" name="phone" placeholder="+391234567891" required type="tel">
+											<button class="btn btn-orange form-header__btn form__btn" type="submit">
+												Ordinare
+											</button>
+										</div>
+										<div class="form-header__bottom form__bottom">
+											*Questo sconto su una confezione è valido quando si ordina il trattamento completo
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<section class="property">
+			<div class="container">
+				<div class="property__wrapper">
+					<h2 class="property__title section-title">
+						quali proprietà ha <span class="section-dec">uncaria?</span>
+					</h2>
+					<div class="property__content">
+						<ul class="property__menu">
+							<li class="property__item property-item block-item">
+								<img src="img/prop/prop2.jpg" alt="" class="property-item__img">
+								<h4 class="property-item__title">
+									Aiuta con l'insonnia
+								</h4>
+							</li>
+							<li class="property__item property-item block-item">
+								<img src="img/prop/prop1.jpg" alt="" class="property-item__img">
+								<h4 class="property-item__title">
+									Aiuta ad aumentare la fertilità
+								</h4>
+							</li>
+							<li class="property__item property-item block-item">
+								<img src="img/prop/prop3.jpg" alt="" class="property-item__img">
+								<h4 class="property-item__title">
+									Purifica il corpo dalle scorie e dalle tossine
+								</h4>
+							</li>
+							<li class="property__item property-item block-item">
+								<img src="img/prop/prop4.jpg" alt="" class="property-item__img">
+								<h4 class="property-item__title">
+									Supporta e rafforza l'immunità
+								</h4>
+							</li>
+							<li class="property__item property-item block-item">
+								<img src="img/prop/prop5.jpg" alt="" class="property-item__img">
+								<h4 class="property-item__title">
+									Riduce i sintomi della depressione
+								</h4>
+							</li>
+							<li class="property__item property-item block-item">
+								<img src="img/prop/prop6.jpg" alt="" class="property-item__img">
+								<h4 class="property-item__title">
+									Migliora l'umore
+								</h4>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="benefits">
+			<div class="container">
+				<div class="benefits__wrapper">
+					<div class="benefits__content">
+						<a href="#to_form" class="btn benefits__btn benefits__btn-mob btn-orange">Ordinare</a>
+						<div class="benefits__img-wrapper benefits-img wow fadeInLeft">
+							<img src="img/benefits/product-mob.png" alt="" class="benefits-img__product product">
+							<img src="img/benefits/juce-orange.png" alt="" class="benefits-img__orange">
+							<img src="img/benefits/juce.png" alt="" class="benefits-img__juce">
+							<img src="img/benefits/sheet.png" alt="" class="benefits-img__sheet">
+						</div>
+						<div class="benefits__inner wow fadeInRight">
+							<h4 class="benefits__title">
+								Una bocetta delle gocce uncaria contiene tanta vitamina C, quanto 15 arance!
+							</h4>
+							<ul class="benefits__menu">
+								<li class="benefits__item">
+									Proprietà antiossidanti, antistress e antinfiammatorie
+								</li>
+								<li class="benefits__item">
+									Migliora gli effetti di altri farmaci e integratori che state assumendo
+								</li>
+								<li class="benefits__item">
+									Non provoca dipendenza ed effetti collaterali
+								</li>
+								<li class="benefits__item">
+									Aiuta a sbarazzarsi delle cattive abitudini
+								</li>
+							</ul>
+							<a href="#to_form" class="btn benefits__btn btn-orange">Ordinare</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="composition">
+			<div class="container">
+				<div class="composition__wrapper">
+					<h2 class="composition__title section-title">
+						Composizione <span class="section-dec">equilibrata</span>
+					</h2>
+					<div class="composition__content">
+						<ul class="composition__menu">
+							<li class="composition__item composition-item composition-item1">
+								<img src="img/composition/comp-1.jpg" alt="" class="composition-item__img">
+								<div class="composition-item__content">
+									<h4 class="composition-item__title">
+										L'estratto di frutta di camu-camu (myrciaria dubia)
+									</h4>
+									<p class="composition-item__text">
+										è l'unica sostanza che ha un effetto positivo su tutti i sistemi del corpo umano: osseo,
+										muscolare, digestivo, respiratorio, escretore, circolatorio, linfatico, immunitario,
+										nervoso, sensoriale, endocrino, riproduttivo - e stimola la loro alta attività
+									</p>
+								</div>
+							</li>
+							<li class="composition__item composition-item composition-item2">
+								<img src="img/composition/comp-2.jpg" alt="" class="composition-item__img">
+								<div class="composition-item__content">
+									<h4 class="composition-item__title">
+										Estratto di erbe di Echinacea purpurea (echinacea purpurea)
+									</h4>
+									<p class="composition-item__text">
+										Aiuta a stimolare il sistema immunitario, aumentare la resistenza del corpo alle
+										infezioni, alleviare i sintomi e ridurre la durata del raffreddore, impedisce la
+										penetrazione nel corpo e la riproduzione attiva di microrganismi patogeni
+									</p>
+								</div>
+							</li>
+							<li class="composition__item composition-item composition-item3">
+								<img src="img/composition/comp-3.jpg" alt="" class="composition-item__img">
+								<div class="composition-item__content">
+									<h4 class="composition-item__title">
+										Cinese alla citronella
+									</h4>
+									<p class="composition-item__text">
+										Tonifica, migliora la funzionalità epatica, stimola il sistema cardiovascolare e nervoso.
+										Utilizzato come adattogeno e stimolante per il superlavoro mentale e fisico. È anche molto
+										efficace nelle sindromi depressive e asteniche, come prevenzione delle infezioni
+										respiratorie acute e dell'influenza. Stimola bene la respirazione dei tessuti
+									</p>
+								</div>
+							</li>
+							<li class="composition__item composition-item composition-item4">
+								<img src="img/composition/comp-4.jpg" alt="" class="composition-item__img">
+								<div class="composition-item__content">
+									<h4 class="composition-item__title">
+										Estratto di corteccia di unghia di gatto (uncaria tomentosa)
+									</h4>
+									<p class="composition-item__text">
+										Stimola il sistema immunitario, ha proprietà antiossidanti, antispasmodiche e
+										antinfiammatorie. La caratteristica principale dell'artiglio del gatto sono gli
+										oligoelementi unici. Include un'enorme quantità di sostanze nutritive che quasi non
+										entrano nel corpo da altri prodotti vegetali
+									</p>
+								</div>
+							</li>
+							<li class="composition__item composition-item composition-item5">
+								<img src="img/composition/comp-5.jpg" alt="" class="composition-item__img">
+								<div class="composition-item__content">
+									<h4 class="composition-item__title">
+										Estratto di agrumi acido l-ascorbico (citrus aurantium)
+									</h4>
+									<p class="composition-item__text">
+										Rafforza il sistema immunitario umano, protegge il corpo da virus e batteri. Aiuta a
+										sintetizzare il collagene, una proteina responsabile della condizione della pelle, dei
+										capelli, della cartilagine e dei vasi sanguigni. Promuove la rigenerazione dei tessuti,
+										rallenta il processo di invecchiamento del corpo e riduce le capacità cognitive e ha un
+										effetto antiaterosclerotico
+									</p>
+								</div>
+							</li>
+						</ul>
+						<a href="#to_form" class="btn composition-btn btn-orange">Ordinare</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="action">
+			<div class="container">
+				<div class="action__wrapper">
+					<div class="action__content">
+						<div class="action__inner">
+							<ul class="action__menu wow fadeInLeft">
+								<li class="action__item">
+									Aumento dell'attività cerebrale
+								</li>
+								<li class="action__item">
+									Miglioramento dell'umore
+								</li>
+								<li class="action__item">
+									Mantenimento dell'immunità
+								</li>
+								<li class="action__item">
+									Miglioramento della funzione riproduttiva
+								</li>
+								<li class="action__item">
+									miglioramento della vista
+								</li>
+								<li class="action__item">
+									Normalizzazione del sonno
+								</li>
+								<li class="action__item">
+									Migliorare le prestazioni mentali, la memoria
+								</li>
+								<li class="action__item">
+									Aumentare l'energia e la resistenza
+								</li>
+								<li class="action__item">
+									Rafforzare tutti i sistemi del organismo
+								</li>
+								<li class="action__item">
+									Rimozione del gonfiore
+								</li>
+								<li class="action__item">
+									Diminuzione della depressione
+								</li>
+								<li class="action__item">
+									Migliorare la digestione
+								</li>
+								<li class="action__item">
+									Disintossicazione naturale
+								</li>
+								<div class="action__img-wrapper action__img-wrapper-lg wow fadeInRight">
+									<img class="action__img action-img product" src="img/product.png" alt="">
+								</div>
+							</ul>
+						</div>
+						<div class="action__img-wrapper">
+							<img class="action__img action-img product" src="img/product.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="stages">
+			<div class="container">
+				<div class="stages__wrapper">
+					<ul class="stages__menu wow fadeInRight">
+						<li class="stages__item stages-item">
+							<div class="stages-number">1</div>
+							<div class="stages__item-content">
+								<h4 class="stages-item__title">
+									Dopo 1 giorno di utilizzo
+								</h4>
+								<p class="stages-item__text">
+									Il corpo inizierà a ricostruirsi. Le sostanze nella composizione inizieranno ad agire
+									istantaneamente: dalla prima goccia, ogni cellula riceverà il nutrimento e la forza per
+									funzionare correttamente. Da questo giorno inizierà il processo di completo ripristino del
+									sistema nervoso e disintossicazione.
+								</p>
+							</div>
+						</li>
+						<li class="stages__item stages-item">
+							<div class="stages-number">2</div>
+							<div class="stages__item-content">
+								<h4 class="stages-item__title">
+									Dopo 3-5 giorni di utilizzo
+								</h4>
+								<p class="stages-item__text">
+									Il sonno diventerà più forte, inizierete a sentirvi allegri, l'energia tornerà e il vostro
+									umore migliorerà. Vi sarà più facile concentrarsi sui compiti, smetterai di dimenticare,
+									potrete concentrarvi a lungo su una o più attività.
+								</p>
+							</div>
+						</li>
+						<li class="stages__item stages-item">
+							<div class="stages-number">3</div>
+							<div class="stages__item-content">
+								<h4 class="stages-item__title">
+									Dopo 10-12 giorni di utilizzo
+								</h4>
+								<p class="stages-item__text">
+									La vosta memoria migliorerà, dormirete meglio e vi tufferete rapidamente nella fase profonda
+									del sonno, il vostro mal di testa, l'acufene, le stelle davanti ai vostri occhi
+									scompariranno. L'appetito e la sazietà saranno ripristinati. Il bruxismo notturno e i crampi
+									scompariranno. Il battito del cuore si calmerà. Il corpo riceverà una quantità sufficiente di
+									ossigeno, non ci saranno picchi di pressione.
+								</p>
+							</div>
+						</li>
+						<li class="stages__item stages-item">
+							<div class="stages-number">4</div>
+							<div class="stages__item-content">
+								<h4 class="stages-item__title">
+									Dopo 20-22 giorni di utilizzo
+								</h4>
+								<p class="stages-item__text">
+									L'ansia e l'irrequietezza scompariranno. Sorriderai più spesso e vi goderete la vita. In uno
+									stato calmo e in ottima salute, non sarete stressati, non sarete infastiditi da piccole
+									sciocchezze. Avrete risorse sufficienti per risolvere qualsiasi compito difficile o
+									spiacevole. Ora vi goderete tutto.
+								</p>
+							</div>
+						</li>
+						<li class="stages__item stages-item">
+							<div class="stages-number number-5">5</div>
+							<div class="stages__item-content">
+								<h4 class="stages-item__title">
+									A partire da 30 giorni di utilizzo
+								</h4>
+								<p class="stages-item__text">
+									Ogni sistema del corpo riceverà la giusta quantità di sostanze attive per il pieno
+									funzionamento. Le proprietà immunitarie del corpo aumenteranno. L'ansia irragionevole se ne
+									andrà, vi riprenderete più velocemente e vi stancherete di meno. Gli incubi e gli attacchi di
+									panico passeranno. Vi sentirete completamente sani e felici.
+								</p>
+							</div>
+						</li>
+					</ul>
+					<a href="#to_form" class="btn-orange btn btn__stages">Ordinare</a>
+				</div>
+			</div>
+		</section>
+		<section class="application">
+			<div class="container">
+				<div class="application__wrapper wow fadeInDown">
+					<div class="application__img-wrapper">
+						<img class="application-img" src="img/app/cap.svg" alt="">
+						<div class="application-img__text">
+							<h1 class="application__img-title">
+								25 Gocce
+							</h1>
+							<p class="application__img-text">
+								<span class="aplication-text-dec">Due Volte</span> al Giorno
+							</p>
+						</div>
+					</div>
+					<div class="application__content">
+						<h4 class="application__title">
+							Modalità d'assunzione:
+						</h4>
+						<p class="application__text">
+							Assumere 25 gocce 2 volte al giorno. Il miglior risultato fornisce un corso di 30 giorni o più.
+						</p>
+						<div class="application__block red-block red-block2">
+							Controindicazioni: età inferiore ai 18 anni, ipersensibilità individuale ad uno qualsiasi dei
+							componenti, gravidanza, allattamento
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="technology">
+			<div class="container">
+				<div class="technology__wrapper">
+					<h2 class="technology__title section-title">
+						la nostra <span class="section-dec">tecnologia</span>
+					</h2>
+					<div class="technology__content">
+						<div class="technology__img-wrapper wow fadeInRight">
+							<img class="technology__img product" src="img/technology/tech.png" alt="">
+						</div>
+						<div class="technology__menu wow fadeInLeft">
+							<li class="technology__item">
+								<img src="img/technology/icon-1.png" class="technology__item-img" alt="">
+								<p class="technology__text">
+									Le esclusive tecnologie Full Potency e di essiccazione sottovuoto utilizzate nella produzione
+									consentono di preservare l'effetto benefico di tutti i componenti attivi della pianta
+								</p>
+							</li>
+							<li class="technology__item">
+								<img src="img/technology/icon-2.png" class="technology__item-img" alt="">
+								<p class="technology__text">
+									Uncaria è realizzato esclusivamente con le materie prime naturali, senza l'aggiunta di
+									zucchero, amido, lievito, glutine, conservanti sintetici ed aromi
+								</p>
+							</li>
+							<li class="technology__item">
+								<img src="img/technology/icon-3.png" class="technology__item-img" alt="">
+								<p class="technology__text">
+									Adatto ai vegetariani
+								</p>
+							</li>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__wrappper">
+				<div class="footer__form-wrapper">
+					<form id="to_form" class="form form-footer" method="post" action="">
+						<input name="country" type="hidden" value="IT">
+						<div class="form-footer__wrapper form__wrapper">
+							<div class="form-footer__top form__top">
+								<p class="form-footer__text form__text">
+									Ordina uncaria con uno
+								</p>
+								<h2 class="form-footer__title form__title">
+									sconto del 50%
+								</h2>
+							</div>
+							<div class="form-footer__price form__price">
+								<span class="oldPriceAndLabelForLandingInfoApi price-old">89.8 EUR</span>
+								<span class="priceAndLabelForLandingInfoApi price-new">44.9 EUR</span>
+							</div>
+							<div class="form-footer__content form__content">
+								<label for="">
+									Il tuo nome:
+								</label>
+								<input name="name" required placeholder="Elena Bianchi" class="input" type="text">
+								<label for="">
+									Telefono:
+								</label>
+								<input name="phone" placeholder="+391234567891" class="input" required type="tel">
+								<button class="btn form-footer__btn form__btn btn-orange" type="submit">
+									Ordinare
+								</button>
+							</div>
+							<div class="form-footer__bottom form__bottom">
+								*Questo sconto su una confezione è valido quando si ordina il trattamento completo
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<a href="//privacy.lr-land.com/privacy.html" class="footer-link">Privacy</a>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
+	<script src="https://cdn.leadreaktor.com/script.js"></script>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			let formInstockValue;
+			let countDownFlag = true
+
+			// Функция уменьшения количества упаковок
+			function countdown(el) {
+				if (formInstockValue > 10) {
+					formInstockValue -= randomIntFromInterval(1, 3)
+					changeCounter(formInstockValue, el)
+
+				} else if (formInstockValue > 7) {
+					formInstockValue -= 1
+					changeCounter(formInstockValue, el)
+				}
+			}
+
+			function changeCounter(num, el) {
+				localStorage.setItem('inStock', num)
+				el.style.opacity = 0
+				setTimeout(function () {
+					el.style.opacity = 1
+					el.textContent = num
+				}, 300)
+			}
+
+			// Функция для генерации случайного числа в заданном диапазоне
+			function randomIntFromInterval(min, max) {
+				// min and max included
+				return Math.floor(Math.random() * (max - min + 1) + min)
+			}
+
+			// Здесь указываем класс элементов, в котором(ых) находится счётчик упаковок
+			const element = document.querySelectorAll('.header');
+
+			let Visible = function (targets) {
+				// Проходимся по всем блокам со счётчиком, если их несколько
+				targets.forEach(target => {
+					let formInStockEl = target.querySelector('.packs-instock')
+					// Проверяем наличие записи в localStorage о количестве упаковок
+					if (localStorage.hasOwnProperty('inStock')) {
+						formInStockEl.textContent = localStorage.getItem('inStock')
+						formInstockValue = formInStockEl.textContent;
+					} else {
+						formInstockValue = formInStockEl.textContent;
+						localStorage.setItem('inStock', formInstockValue)
+					}
+					// Все позиции элемента
+					let targetPosition = {
+						top: window.pageYOffset + target.getBoundingClientRect().top,
+						left: window.pageXOffset + target.getBoundingClientRect().left,
+						right: window.pageXOffset + target.getBoundingClientRect().right,
+						bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+					},
+						// Получаем позиции окна
+						windowPosition = {
+							top: window.pageYOffset,
+							left: window.pageXOffset,
+							right: window.pageXOffset + document.documentElement.clientWidth,
+							bottom: window.pageYOffset + document.documentElement.clientHeight
+						};
+
+					if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+						targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+						targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+						targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+						// Если элемент полностью видно, то запускаем следующий код
+						if (countDownFlag) {
+							startCountDown(formInStockEl)
+							countDownFlag = false
+						}
+					} else {
+						// Если элемент не видно, то запускаем этот код
+
+					};
+				})
+			};
+
+
+			// Запускаем функцию при прокрутке страницы
+			window.addEventListener('scroll', function () {
+				Visible(element)
+			});
+
+			// А также запустим функцию сразу. А то вдруг, элемент изначально видно
+			Visible(element)
+
+			function startCountDown(el) {
+				let countInterval = setInterval(function () {
+					countdown(el)
+				}, randomIntFromInterval(10, 15) * 1000)
+				// В функцию передаём количество секунд от 5 до 8. Умножаем на 1000 для получения миллисекунд(для работы интервала). В данном случае получаем случайное число в диапазоне от 5 до 8 включительно.
+			}
+		})
+	</script>
+	<script src="js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+	<?=$api->addBottomScripts()?>
+</body>
+
+</html>
